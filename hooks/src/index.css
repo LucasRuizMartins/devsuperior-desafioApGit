@@ -55,3 +55,9 @@ body {
 .mb20 {
   margin-top: 20px;
 }
+
+.error-msg { 
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 700;
+}

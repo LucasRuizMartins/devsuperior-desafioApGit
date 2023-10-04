@@ -14,6 +14,7 @@ function App() {
   const [buttonClicked, setButtonClicked] = useState(false);
   const [infoTitle, setInfoTitle] = useState("Desafio Github APIb");
   const [gitUser, setGitUser] = useState("");
+  const [error, setError] = useState("");  
 
   const handleInputChange = (value: string) => {
     setGitUser(value); 
@@ -28,14 +29,21 @@ function App() {
       setButtonClicked(true);
       setInfoTitle("Encontre um perfil Github");
       setGitUser("");
+      setError(""); 
     } else {
       axios.get(`https://api.github.com/users/${gitUser}`)
         .then(response => {
-          setGitUser(response.data);
+          if (response.data.message) {
+               setError("Erro ao buscar usuário");
+          } else {
+            setGitUser(response.data);
+            setError(""); 
+          }
           console.log(response);
         })
         .catch(error => {
           console.error("Erro ao consultar a API do GitHub:", error);
+          setError("Erro ao buscar usuário"); 
         });
     }
   };
@@ -50,15 +58,17 @@ function App() {
         onInputChange={handleInputChange} 
       />
       <Button text={buttonText} onClick={toggleBodyClass} />
-      {buttonClicked && gitUser && ( 
+      {buttonClicked && gitUser && !error && ( 
         <GitResponse
           name={gitUser.name}
           avatar={gitUser.avatar_url}
           user={gitUser.login}
           followers={gitUser.followers}
           location={gitUser.location} 
-          className={gitClass}        />
+          className={gitClass}
+        />
       )}
+      {error && <p className="container error-msg">{error}</p>} 
     </>
   );
 }
