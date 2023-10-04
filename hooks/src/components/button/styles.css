@@ -1,0 +1,14 @@
+.btn {
+    border-radius: 4px;
+    color: #fff;
+    width: 101px;
+    height: 40px;
+    background-color:#1890FF ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+ 

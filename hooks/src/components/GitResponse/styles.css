@@ -1,0 +1,44 @@
+.git-area {
+    padding: 40px;
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    height: 334px;
+    background-color: #F5F5F5;
+
+}
+.git-card span{
+font-weight: 700;
+ 
+}
+.git-info {
+  color: #1890FF;
+    
+}
+.line {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px ;
+    height: 40px;
+    background-color: #fff;
+    border: 1px solid #D9D9D9;
+    justify-content: center;
+    align-items: center;
+}
+.git-area img{
+    width: 300px;
+}
+
+.hidden { 
+    display: none;
+   }
+   
+.git-card {
+    margin-top: 40px;
+    margin-left: 30px;
+border-radius: 8px;
+width: 902px;
+height: 247px;
+background-color: #fff;
+ 
+}

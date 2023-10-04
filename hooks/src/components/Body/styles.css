@@ -1,0 +1,30 @@
+.schol-name {
+  color: #7e7e7e;
+  font-size: 24px;
+}
+.title {
+  font-size: 46px;
+}
+
+.search-area{
+    width: 100%;
+    height: 270px;
+    margin-top: 54px;   
+    background-color: #E6F7FF;
+
+
+}
+
+.git-input {
+  margin-left: 31px;
+  margin-top: 12px;
+  width: 298px;
+  height: 40px;
+  padding: 15px;
+}
+
+.hidden { 
+ display: none;
+}
+
+ 

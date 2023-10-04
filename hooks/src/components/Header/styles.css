@@ -1,0 +1,33 @@
+.nav-bar {
+    background-color: var(--bg-secondary);
+    color: var(--font-primary);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-red {
+    margin: 20px;
+
+    font-weight: 700;
+}
+.nav-white {
+    margin: 20px;
+    color: white;
+    
+}
+
+.dblock {
+    margin: 1rem 0;
+    display: block;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-container img{
+width: 30px;
+height: 30px;
+}
